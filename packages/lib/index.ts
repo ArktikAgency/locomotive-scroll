@@ -95,10 +95,10 @@ export default class LocomotiveScroll {
     private _init(): void {
         // Create Lenis instance
         this.lenisInstance = new Lenis({
-            ...this.lenisOptions,
             wrapper: window,
             content: document.documentElement,
-            infinite: false
+            infinite: false,
+            ...this.lenisOptions
         });
         this.lenisInstance?.on('scroll', this.scrollCallback);
 
